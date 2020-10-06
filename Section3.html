@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task3</title>
+
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<p>1*. Написать функцию, которая очищает строку от всех не буквенно-цифровых
+символов.
+Пример: "This., -/ is #! a ;: {} to $ % ^ & * book"; преобразуется "This is a book"</p>
+	<input type="text" id="task1"  placeholder="Введите текст...">
+	<button id="clearString" onclick="clearString()">Очистить</button> 
+	<br/>
+	<output id="readyStr">Результат: </output>
+
+	<p>2. Напишите функцию zeros(num, len), которая дополняется нулями до указанной
+длины введенное числовое значение.
+Пример: zeros(12,8) ответ 00000012 Пример, zeros(-3, 5) ответ -00003</p>
+	<input type="number" id="task2Num"  placeholder="num">
+	<input type="number" id="task2len"  placeholder="len">
+	<button id="clearString" onclick="zeros()">Получить результат</button> 
+	<br/>
+	<output id="task2Res">Результат: </output>
+
+	<p>3. Напишите функцию которая переводит введенную строку в верблюжий
+регистр (CamelCase).
+Пример: "hello world" преобразуется "helloWorld"</p>
+	<input type="text" id="camelTask"  placeholder="Введите текст...">
+	<button id="camel1" onclick="toCamelCase()">Решение с помощью массива</button>
+	<button id="camel1" onclick="CamelCase()">Решение с помощью регулярного выражения</button> 
+	<br/>
+	<output id="camel1Res">Результат(массив): </output>
+	<br/>
+	<output id="camel2Res">Результат(регулярное выражение): </output>
+
+
+	<p>4*. Получить массив , элементы которого являются числами фибоначчи. Размер
+массива (количество элементов) задает пользователь.
+Для определения (вычисления) элемента создать функцию-рекурсию.</p>
+	<input type="text" id="fibonacciLen"  placeholder="Размер массива">
+	<button onclick="getF()">Получить массив</button> 
+	<br/>
+	<output id="fibonacciRes">Результат(регулярное выражение): </output>
+
+	<p>5. Создайте массив и отфильтруйте его, удалив все отрицательные и нулевые
+элементы.</p>
+	<input type="number" id="arraylen" value="10" placeholder="Длина массива">
+	<button onclick="arrayFilter()">Сгенерировать</button> 
+	<br/>
+	<output id="before">Массив: </output>
+	<br/>
+	<output id="after">Очищенный массив: </output>
+
+	<p>6. Создайте классы Художник (имя, фамилия, контактные данные) и Картина
+(название, год, техника выполнения, размеры).
+Реализуйте методы для создания объектов. Реализуйте свойство количество
+работ (у художника) и обновляйте его при добавлении новой работы. Выведите
+информацию о художника, его работы и их количество.</p>
+	<button onclick="createArtist();">Создать и вывести в консоль</button>
+
+
+	<p>7. Создайте кнопку, которая подсчитывает количество нажатий на нее</p>
+	<button id="showCount" onclick="clickCounter();">Нажми на меня</button>
+
+	<p>8. Добавьте порядковый номер текстового абзаца в его начале при нажатии на
+кнопку.</p>
+	<div id="parTask">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<button id="parButton" onclick="parCounter()">Расставить номера абзацев</button>
+	</div>
+
+	<p>9. Даны дивы (div). По первому нажатию на каждый див он окрасится синим
+фоном, по второму красится обратно и так далее каждый клик происходит
+чередование фона. Сделайте так, чтобы было две функции: одна красит в синий
+цвет, другая в зеленый например, и они сменяли друг друга через
+removeEventListener.</p>
+	<div id="divTask">
+		<div></div>
+		<div></div>
+	</div>
+
+	<p>10. Создать promise для каждого типа (number, boolean, string, symbol, null,
+undefined, object). Создать асинхронную функцию для их console.log.</p>
+	<button onclick="promises();">Создать и вывести в консоль</button>
+
+
+
+	
+
+	
+
+	
+	<script src="Section3.js"></script>
+</body>
+</html>

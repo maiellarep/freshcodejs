@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task2</title>
+	<!-- META TAGS -->
+	<meta charset="utf-8">
+</head>
+<body>
+	<p>1. Найти сумму ряда последовательно идущих чисел от lim1 до lim2, Например,
+		если lim1=5, lim2=8, то это сумма 5+6+7+8.</p>
+	<input type="number" id="lim1" value="5" placeholder="lim1">
+	<input type="number" id="lim2" value="8" placeholder="lim2"> 
+	<br/>
+	<button id="first-task" onclick="progrSolution()">Результат(сумма прогрессии)</button> 
+	<br/>
+	<output id="first">Результат</output>
+
+	<p>2. Задание решить с помощью цикла for, цикла while, создания функции.</p>
+	<p>Значения берутся из input в задании 1</p>
+	<button id="forSolution" onclick="forSolution()">Результат(while)</button> 
+	<br/>
+	<button id="whileSolution" onclick="whileSolution()">Результат(for)</button> 
+	<br/>
+	<output id="forS">Решение с помощью for</output>
+	<br/>
+	<output id="whileS">Решение с помощью while</output>
+
+	<p>3. Реализовать стрелочную функцию произведения двух чисел.</p>
+	<input type="number" id="num1" value="1" placeholder="num1">
+	<input type="number" id="num2" value="1" placeholder="num2"> 
+	<button id="product" onclick="ProductNum()">Результат</button> 
+	<br/>
+	<output id="numbersProduct">Произведение двух чисел</output>
+
+
+	<p>3.1 Создать числовой массив и проинициализировать его.</p>
+	<p>3.1* Инициализация с помощью случайных чисел.</p>
+	<input type="number" id="arraylen" value="10" placeholder="Длина массива">
+	<button onclick="initialization()">Сгенерировать</button> 
+	<br/>
+	<output id="array" >Массив: </output>
+
+	<p>3.2 Вывести размер массива.</p>
+	<output id="length" >Размер массива: </output>
+
+	<p>3.3 Вывести элементы с четными индексами.</p>
+	<output id="evenind" >Элементы с четными индексами: </output>
+
+	<p>3.4 Вывести только четные элементы (четные числа делятся на 2 без остатка).</p>
+	<output id="evennum" >Четные числа: </output>
+
+	<p>3.5 Вывести индексы нулевых элементов (элемент равен нулю).</p>
+	<output id="indexZeros" >Индексы нулевых элементов: </output>
+
+	<p>3.6 Подсчитать количество нулевых элементов.</p>
+	<output id="amountZeros" >Количество нулевых элементов: </output>
+	<br/>
+	<button onclick="info()">Вывести информацию о массиве</button> 
+
+	<p>4. Создать объект Машина и прописать для него свойства.</p>
+	<p>Объект будет выведен в консоль</p>
+	<input type="text" id="carNum"placeholder="Номер">
+	<input type="text" id="carColor" placeholder="Цвет">
+	<input type="text" id="carName" placeholder="Производитель">
+	<input type="text" id="carModel" placeholder="Модель">
+	<button id="product" onclick="carObj()">Создать и вывести в консоль</button> 
+
+	<p>5. Создать функции-конструкторы:
+ Книга (автор, название, год издания, издательство)
+ Электронная версия книги (автор, название, год издания, издательство, формат,
+электронный номер)</p>
+	<button id="books1" onclick="Books1()">Создать и вывести в консоль</button>
+	<p>5.1 Переделать создание функций без дублежа информации, реализовав
+прототипное наследование.</p>
+	<p>5.2 Вывести объекты в консол.</p>
+	<button id="books2" onclick="Books2()">Создать и вывести в консоль</button>
+
+
+
+
+
+
+
+
+
+
+	<script src="Section2.js"></script>
+</body>
+</html>
